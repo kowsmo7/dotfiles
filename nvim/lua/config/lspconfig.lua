@@ -16,3 +16,11 @@ local RUST_ANALYZER = {
 
 lspconfig.rust_analyzer.setup(RUST_ANALYZER)
 
+vim.diagnostic.config({
+	signs = false,
+	severity_sort = true,
+	virtual_text = {
+		severity = vim.diagnostic.severity.ERROR,
+		prefix = "",
+	},
+})
